@@ -70,10 +70,10 @@ function App() {
     <div className='App'>
       <NavBar busca={busca} setBusca={setBusca} />
 
-      <div className='result'>
+      <div className='results'>
 
         <div className='filter-title'>
-          <p className='price2'> {filter} </p>
+          <p className='filter-title-style'> {filter} </p>
           <FilterPrice
             minimumPrice={minimumPrice}
             setMinimumPrice={setMinimumPrice}
@@ -83,8 +83,8 @@ function App() {
           <FilterFormat setFormat={setFormat} />
         </div >
 
-        <div className='price3' >
-          <p className='result2'> {resultTo}:</p>
+        <div className='result' >
+          <p className='search-result'> {resultTo}:</p>
           <SearchResult dataArray={dataArray} />
         </div>
       </div>

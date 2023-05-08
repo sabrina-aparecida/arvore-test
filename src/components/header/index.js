@@ -21,8 +21,8 @@ const NavBar = ({ busca, setBusca }) => {
         />
       </div>
 
-      <div>
-        <div className='div-photo' />
+      <div className='user-info'>
+        <div className='photo' />
         <div className='user-name'>
           <p>{user}</p>
         </div>

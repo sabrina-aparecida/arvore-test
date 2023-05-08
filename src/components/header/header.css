@@ -36,13 +36,13 @@
     border: 1px solid #DEE1E6;
 }
 
-.div-div {
+.user-info {
     display: grid;
     grid-template-columns: 0.7fr 2fr 0.3fr;
     margin-left: 30%;
 }
 
-.div-photo {
+.photo {
     width: 40px;
     height: 40px;
     border-radius: 50%;
