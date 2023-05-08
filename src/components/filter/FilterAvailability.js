@@ -7,6 +7,9 @@ const FilterAvailability = ({ enableToSale, setEnableToSale }) => {
   const [checkedDesable, setCheckedDesable] = useState(false);
   const [options, setOptions] = useState([false, false]);
 
+  const available = 'Disponível'
+  const desable = 'Indisponível'
+
   
   const handleCheckEnable = (checked, setChecked, checkedEnable, checkedDesable) => {
     setChecked(!checked)
@@ -43,7 +46,7 @@ const FilterAvailability = ({ enableToSale, setEnableToSale }) => {
 
         <label className='filter-label'>
           <input type='checkbox' checked={checkedEnable} onChange={() => handleCheckEnable(checkedEnable, setCheckedEnable, checkedEnable, checkedDesable)} />
-          Disponível</label>
+          {available}</label>
 
         <label className='filter-label'>
           <input type='checkbox' checked={checkedDesable} onChange={() => handleCheckDesable(checkedDesable, setCheckedDesable, checkedEnable, checkedDesable)} />

@@ -1,4 +1,4 @@
-import { useState, useEffect, REACT_APP_GOOGLE_BOOKS_API_KEY } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import NavBar from './components/header';
 import FilterPrice from './components/filter/FilterPrice';

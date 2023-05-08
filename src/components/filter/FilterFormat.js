@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 
 const FilterFormat = ({setFormat}) => {
 
+  const ePub = 'e-pub';
+  const pdf = 'PDF';
+
   const [checkedEpub, setCheckedEnable] = useState(false);
   const [checkedPDF, setCheckedDesable] = useState(false);
   const [options, setOptions] = useState([false, false]);
@@ -29,7 +32,7 @@ const FilterFormat = ({setFormat}) => {
       }
     };
     updateFormat(options);
-    
+
   }, [options]);
 
     return (
@@ -39,11 +42,11 @@ const FilterFormat = ({setFormat}) => {
 
           <label className='filter-label'>
             <input type="checkbox" checked={checkedEpub} onChange={() => handleFormatEPub(checkedEpub, setCheckedEnable, checkedEpub, checkedPDF)} />
-            e-pub</label>
+            {ePub}</label>
 
           <label className='filter-label'>
             <input type="checkbox" checked={checkedPDF} onChange={() => handleFormatPDF(checkedPDF, setCheckedDesable, checkedEpub, checkedPDF)} />
-            PDF</label>
+           {pdf}</label>
 
         </div>
       </div>
