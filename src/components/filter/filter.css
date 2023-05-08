@@ -1,0 +1,41 @@
+.price {
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #9EAEB7;
+}
+
+@media (max-width: 1230px) {
+    .price {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 900px) {
+    .price {
+        font-size: 9px;
+    }
+}
+
+
+.options {
+    display: grid;
+    float: left;
+}
+
+.filter-label {
+    display: flex;
+    padding-bottom: 15%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+@media (max-width: 1100px) {
+    .filter-label {
+        font-size: 11px;
+    }
+}
