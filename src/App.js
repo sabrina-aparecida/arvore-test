@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, REACT_APP_GOOGLE_BOOKS_API_KEY } from 'react';
 import axios from 'axios';
 import NavBar from './components/header';
 import FilterPrice from './components/filter/FilterPrice';
@@ -7,10 +7,9 @@ import FilterFormat from './components/filter/FilterFormat';
 import SearchResult from './components/search/SearchResult';
 import './App.css';
 
-
 function App() {
+  const apiKey = `${process.env.REACT_APP_GOOGLE_BOOKS_API_KEY}`
 
-  const apiKey = 'AIzaSyAqRtHs02xfyr02TcijHIA1jlAHt1ZkHPQ'
   const [dataArray, setImageUrlArray,] = useState([]);
   const [minimumPrice, setMinimumPrice] = useState(0);
   const [maximumPrice, setMaximumPrice] = useState(Infinity);
@@ -19,7 +18,7 @@ function App() {
   const [busca, setBusca] = useState('');
 
   const getGoogleBooksApi = () => {
-    axios.get('https://www.googleapis.com/books/v1/volumes?q=' + busca + '&key=' + apiKey + '&maxResults=27')
+    axios.get('https://www.googleapis.com/books/v1/volumes?q=' + busca + '&key=' + apiKey + '&maxResults=40')
       .then(response => {
         let items = [];
         const data = response.data.items;
